@@ -40,9 +40,9 @@ This Claude Code skill generates high-quality, tailored resumes optimized for sp
 
 2. **Verify installation:**
    ```bash
-   ls ~/.claude/skills/resume-tailoring
+   ls ~/.claude/skills/resume-tailoring/skills/resume-tailoring
    ```
-   You should see: `SKILL.md`, `research-prompts.md`, `matching-strategies.md`, `branching-questions.md`, `README.md`
+   You should see: `SKILL.md`, `research-prompts.md`, `matching-strategies.md`, `branching-questions.md`, `multi-job-workflow.md`
 
 3. **Restart Claude Code** (if already running)
 
@@ -134,7 +134,8 @@ Add your existing resumes in markdown format:
 
 ## Files
 
-### Core Implementation
+### Core Implementation (`skills/resume-tailoring/`)
+All skill files live together so `SKILL.md` can reference them by filename.
 - `SKILL.md` - Main skill implementation with single-job and multi-job workflows
 - `multi-job-workflow.md` - Complete multi-job batch processing workflow
 - `research-prompts.md` - Company/role research templates
@@ -228,7 +229,7 @@ Phase 4: Batch Finalization (review all resumes, update library)
 - 3 jobs: ~40 min vs ~45 min sequential (11% savings)
 - 5 jobs: ~55 min vs ~75 min sequential (27% savings)
 
-See `multi-job-workflow.md` for complete details.
+See `skills/resume-tailoring/multi-job-workflow.md` for complete details.
 
 ## Design Philosophy
 
